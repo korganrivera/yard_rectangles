@@ -17,6 +17,7 @@ The program is designed to be:
 
 The output is an **SVG visualization** showing the yard, obstacles, and the optimal rectangle.
 
+![Example output](output_yard_rects.svg)
 ---
 
 ## Features
