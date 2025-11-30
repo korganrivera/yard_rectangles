@@ -244,14 +244,14 @@ int main() {
     IrregularQuadrilateral quad = { .vertices = {{0,0},{79.224f,70.317f},{55.0f,129.33f},{0.55f,123.627f}} };
     RotatedRectangle smalls_in[] = {
 // This solution assumes that bent dead tree is gone.
-        {{64.311f,  77.657f},  2.700f,  2.700f, 0.000f},    //tree1, nearest house.
-        {{40.365f,  81.172f},  3.354f,  3.354f, 0.000f},    //tree2, middle tree.
-//        {{21.601f, 101.087f},  3.354f,  3.354f, 0.000f},    //tree3, bent tree.
-        {{35.382f, 115.751f}, 20.000f, 12.000f, 0.101f},    //chicken coop
+        {{64.311f,  77.657f},  2.700f,  2.700f, 0.000f},    // tree1, nearest house.
+        {{40.365f,  81.172f},  3.354f,  3.354f, 0.000f},    // tree2, middle tree.
+//      {{21.601f, 101.087f},  3.354f,  3.354f, 0.000f},    // tree3, bent tree.
+        {{35.382f, 115.751f}, 20.000f, 12.000f, 0.101f},    // chicken coop
         {{19.550f,  71.470f}, 37.970f, 74.670f, 3.136f},    // biggest rectangle solution
-        {{52.470f,  83.190f}, 54.510f, 20.820f, 1.579f},    // 2nd biggest rectangle solution
-        {{12.690f, 116.280f}, 14.670f, 24.240f, 1.57f}    // 3rd biggest rectangle solution
-//        {{ 9.570f,  25.530f}, 18.830f, 17.310f, 6.277f}     // 4th biggest rectangle solution
+//      {{52.470f,  83.190f}, 54.510f, 20.820f, 1.579f},    // 2nd biggest rectangle solution
+//      {{12.690f, 116.280f}, 14.670f, 24.240f, 1.57f}      // 3rd biggest rectangle solution
+//      {{ 9.570f,  25.530f}, 18.830f, 17.310f, 6.277f}     // 4th biggest rectangle solution
     };
     const int num_small = sizeof(smalls_in)/sizeof(smalls_in[0]);
 
