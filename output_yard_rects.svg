@@ -1,9 +1,10 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='-2.00 -2.00 83.22 133.33'>
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='-2.00 -2.00 100.90 166.11'>
 <style> .q{fill:none;stroke:black;stroke-width:0.6;} .sm{fill:rgba(255,0,0,0.6);} .b{fill:rgba(0,255,0,0.4);} </style>
-<polygon class='q' points='0.00,0.00 79.22,70.32 55.00,129.33 0.55,123.63 ' />
-<polygon class='sm' points='62.96,76.31 65.66,76.31 65.66,79.01 62.96,79.01 ' />
-<polygon class='sm' points='38.69,79.49 42.04,79.49 42.04,82.85 38.69,82.85 ' />
-<polygon class='sm' points='26.04,108.77 45.94,110.79 44.73,122.73 24.83,120.71 ' />
-<polygon class='sm' points='38.74,108.70 0.77,108.91 0.36,34.24 38.33,34.03 ' />
-<polygon class='b' points='62.81,110.29 41.95,110.20 42.17,55.89 63.02,55.97 ' />
+<polygon class='q' points='0.00,0.00 96.90,80.54 67.37,162.11 0.00,156.83 ' />
+<polygon class='sm' points='66.97,103.54 68.46,103.54 68.46,105.02 66.97,105.02 ' />
+<polygon class='sm' points='44.93,106.40 50.22,106.40 50.22,111.69 44.93,111.69 ' />
+<polygon class='sm' points='28.48,145.91 48.42,147.47 47.80,155.45 27.86,153.89 ' />
+<polygon class='sm' points='42.63,79.28 48.21,79.28 48.21,84.86 42.63,84.86 ' />
+<polygon class='sm' points='42.70,145.87 0.27,145.94 0.10,35.51 42.53,35.44 ' />
+<polygon class='b' points='84.06,110.26 44.62,93.23 57.45,63.52 96.89,80.55 ' />
 </svg>

@@ -18,8 +18,8 @@
 #include <omp.h>
 #include <stdint.h>
 
-#define POPULATION_SIZE 1000
-#define MAX_GENERATIONS 20000
+#define POPULATION_SIZE 10000
+#define MAX_GENERATIONS 50000
 #define CONVERGENCE_THRESHOLD 400
 #define TOP_K_DIVISOR 10
 #define ELITE_COUNT 8
@@ -241,14 +241,14 @@ static inline float polygon_signed_area_ccw(const Point v[4]) {
 /* ---------------- main program ---------------- */
 int main() {
     srand((unsigned)time(NULL));
-    IrregularQuadrilateral quad = { .vertices = {{0,0},{79.224f,70.317f},{55.0f,129.33f},{0.55f,123.627f}} };
+    IrregularQuadrilateral quad = { .vertices = {{0.0f,0.0f},{96.899f,80.539f},{67.374f,162.112f},{0.0f,156.833f}} };
     RotatedRectangle smalls_in[] = {
 // This solution assumes that bent dead tree is gone.
-        {{64.311f,  77.657f},  2.700f,  2.700f, 0.000f},    // tree1, nearest house.
-        {{40.365f,  81.172f},  3.354f,  3.354f, 0.000f},    // tree2, middle tree.
-//      {{21.601f, 101.087f},  3.354f,  3.354f, 0.000f},    // tree3, bent tree.
-        {{35.382f, 115.751f}, 20.000f, 12.000f, 0.101f},    // chicken coop
-        {{19.550f,  71.470f}, 37.970f, 74.670f, 3.136f},    // biggest rectangle solution
+        {{67.715f,  104.282f},  1.485f,  1.485f, 0.000f},   // tree1, nearest house.
+        {{47.573f,  109.047f}, 5.291f,  5.291f, 0.000f},    // tree2, middle tree.
+        {{38.1385f, 150.68075f}, 20.000f, 8.000f, 0.078f},  // chicken coop
+        {{45.422f, 82.067f}, 5.583f, 5.583f, 0.0f},  	    // firepit
+        {{21.4f,  90.69f}, 42.43f, 110.43f, 3.14f},         // biggest rectangle solution
 //      {{52.470f,  83.190f}, 54.510f, 20.820f, 1.579f},    // 2nd biggest rectangle solution
 //      {{12.690f, 116.280f}, 14.670f, 24.240f, 1.57f}      // 3rd biggest rectangle solution
 //      {{ 9.570f,  25.530f}, 18.830f, 17.310f, 6.277f}     // 4th biggest rectangle solution
