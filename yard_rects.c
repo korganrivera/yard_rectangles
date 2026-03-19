@@ -242,19 +242,17 @@ static inline float polygon_signed_area_ccw(const Point v[4]) {
 /* ---------------- main program ---------------- */
 int main() {
     srand((unsigned)time(NULL));
-    IrregularQuadrilateral quad = { .vertices = {{0.0f,0.0f},{96.899f,80.539f},{67.374f,162.112f},{0.0f,156.833f}} };
+    IrregularQuadrilateral quad = { .vertices = {{4.0f,22.83f},{88.203f,92.811f},{64.647f,157.883f},{4.0f,153.134f}} };
     RotatedRectangle smalls_in[] = {
-// This solution assumes that bent dead tree is gone.
-        {{67.874f,  104.282f},  1.485f,  1.485f, 0.000f},   // tree1, nearest house.
-        {{47.573f,  109.047f}, 1.91f,  1.91f, 0.000f},    // tree2, middle tree.
-        {{38.1385f, 150.68075f}, 20.000f, 8.000f, 0.078f},  // chicken coop
-        {{45.422f, 82.067f}, 5.583f, 5.583f, 0.0f},  	    // firepit
-        {{21.4f,  90.69f}, 42.43f, 110.43f, 3.14f},         // biggest rectangle solution
-        {{57.85f,  108.02f},     105.13f, 18.64f, 4.701f}, // biggest solution.
 
-//      {{52.470f,  83.190f}, 54.510f, 20.820f, 1.579f},    // 2nd biggest rectangle solution
-//      {{12.690f, 116.280f}, 14.670f, 24.240f, 1.57f}      // 3rd biggest rectangle solution
-//      {{ 9.570f,  25.530f}, 18.830f, 17.310f, 6.277f}     // 4th biggest rectangle solution
+        {{67.8745f,  104.2815f},     9.485f, 9.485f, 0.000f},   // tree1, nearest house, includes 4-ft barrier.
+        {{47.732f,  109.047f},     9.91f,  9.91f,  0.000f},     // tree2, middle tree, includes 4-ft barrier.
+        {{38.2945f, 148.687f},  28.000f, 12.000f, 0.078f},      // chicken coop, includes 4-ft barrier.
+        {{45.4215f,   82.0665f},     13.583f, 13.583f, 0.0f},   // firepit, includes 4-ft barrier.
+        {{21.32f,   96.61f},    90.0f, 34.63f,  4.712f},        // 1st biggest solution
+        {{54.4f,   128.35f},    28.69f, 31.49f,  1.571f}, // 2nd biggest solution
+      //  {{76.32f,   96.62f},    52.63f, 14.11f,  4.787f},   // 3rd biggest solution
+
     };
     const int num_small = sizeof(smalls_in)/sizeof(smalls_in[0]);
 
