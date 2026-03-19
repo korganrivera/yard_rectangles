@@ -219,7 +219,14 @@ void generate_svg(const char *fn, const IrregularQuadrilateral *q, const SmallRe
                           if(q->vertices[i].y<miny)miny=q->vertices[i].y; if(q->vertices[i].y>maxy)maxy=q->vertices[i].y; }
     fprintf(f,"<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='%.2f %.2f %.2f %.2f'>\n",
             minx-2,miny-2,(maxx-minx)+4,(maxy-miny)+4);
-    fprintf(f,"<style> .q{fill:none;stroke:black;stroke-width:0.6;} .sm{fill:rgba(255,0,0,0.6);} .b{fill:rgba(0,255,0,0.4);} </style>\n");
+   // fprintf(f,"<style> .q{fill:none;stroke:black;stroke-width:0.6;} .sm{fill:rgba(255,0,0,0.6);} .b{fill:rgba(0,255,0,0.4);} </style>\n");
+	fprintf(f,
+	"<style>"
+	".q{fill:none;stroke:black;stroke-width:1;vector-effect:non-scaling-stroke;}"
+	".sm{fill:rgba(255,0,0,0.6);stroke:black;stroke-width:1;vector-effect:non-scaling-stroke;}"
+	".b{fill:rgba(0,255,0,0.4);stroke:black;stroke-width:1;vector-effect:non-scaling-stroke;}"
+	"</style>\n");
+
     fprintf(f,"<polygon class='q' points='");
     for (int i=0;i<4;i++) fprintf(f,"%.2f,%.2f ", q->vertices[i].x, q->vertices[i].y);
     fprintf(f,"' />\n");
