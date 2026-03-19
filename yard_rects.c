@@ -18,19 +18,20 @@
 #include <omp.h>
 #include <stdint.h>
 
-#define POPULATION_SIZE 10000
+#define POPULATION_SIZE 1600
 #define MAX_GENERATIONS 50000
 #define CONVERGENCE_THRESHOLD 400
 #define TOP_K_DIVISOR 10
 #define ELITE_COUNT 8
-#define RANDOM_INJECTION_RATE 0.08f
+#define RANDOM_INJECTION_RATE 0.06f
 #define INITIAL_SIGMA_SCALE 1.0f
-#define MIN_SIGMA 0.12f
-#define ANNEALING_END_SCALE 0.6f
+#define MIN_SIGMA 0.0009f
+#define ANNEALING_END_SCALE 0.5f
 #define REPAIR_SHRINK_FACTOR 0.96f
 #define REPAIR_MAX_STEPS 18
-#define HILL_CLIMB_STEPS 10
+#define HILL_CLIMB_STEPS 12
 #define HILL_PERTURB_SCALE 0.06f
+
 
 typedef struct { float x,y; } Point;
 typedef struct { Point vertices[4]; } IrregularQuadrilateral;
@@ -244,11 +245,13 @@ int main() {
     IrregularQuadrilateral quad = { .vertices = {{0.0f,0.0f},{96.899f,80.539f},{67.374f,162.112f},{0.0f,156.833f}} };
     RotatedRectangle smalls_in[] = {
 // This solution assumes that bent dead tree is gone.
-        {{67.715f,  104.282f},  1.485f,  1.485f, 0.000f},   // tree1, nearest house.
-        {{47.573f,  109.047f}, 5.291f,  5.291f, 0.000f},    // tree2, middle tree.
+        {{67.874f,  104.282f},  1.485f,  1.485f, 0.000f},   // tree1, nearest house.
+        {{47.573f,  109.047f}, 1.91f,  1.91f, 0.000f},    // tree2, middle tree.
         {{38.1385f, 150.68075f}, 20.000f, 8.000f, 0.078f},  // chicken coop
         {{45.422f, 82.067f}, 5.583f, 5.583f, 0.0f},  	    // firepit
         {{21.4f,  90.69f}, 42.43f, 110.43f, 3.14f},         // biggest rectangle solution
+        {{57.85f,  108.02f},     105.13f, 18.64f, 4.701f}, // biggest solution.
+
 //      {{52.470f,  83.190f}, 54.510f, 20.820f, 1.579f},    // 2nd biggest rectangle solution
 //      {{12.690f, 116.280f}, 14.670f, 24.240f, 1.57f}      // 3rd biggest rectangle solution
 //      {{ 9.570f,  25.530f}, 18.830f, 17.310f, 6.277f}     // 4th biggest rectangle solution
